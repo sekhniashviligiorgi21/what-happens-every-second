@@ -1,0 +1,127 @@
+/* --- Global Styles & Font Import --- */
+:root {
+    --bg-color: #000000;
+    --primary-text: #f5f5f5;
+    --secondary-text: #9fa8a3;
+    --accent-color: #4ecca3; /* A minty green accent */
+    --border-color: #2c2c2f;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--primary-text);
+    line-height: 1.6;
+}
+
+/* --- Content Wrapper --- */
+main {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 2rem 1.5rem;
+    text-align: center;
+}
+
+/* --- Sticky Header (Requires the <header> tag in HTML) --- */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    padding: 1.2rem 1rem;
+    text-align: center;
+    background-color: rgba(26, 26, 29, 0.9);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border-color);
+}
+
+#header {
+    font-weight: 700;
+    font-size: 1.6rem;
+    margin-bottom: 0.5rem;
+}
+
+#time {
+    color: var(--accent-color);
+    font-family: 'Roboto Mono', monospace;
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+#open {
+    font-size: 1.1rem;
+    color: var(--secondary-text);
+    font-style: italic;
+    margin-bottom: 3rem;
+}
+
+/* --- Styling for the Stat Sections --- */
+
+/* Targets all image paragraphs (id="img", id="img1", etc.) */
+p[id^="img"] {
+    margin-bottom: 1rem;
+}
+
+p[id^="img"] img {
+    max-width: 180px;
+    height: auto;
+    background-color: #252528;
+    padding: 10px;
+    border-radius: 50%; /* Makes the background circular */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Targets all the number paragraphs */
+#children, #iphone, #lightning-strike, #tree, #cocacola, #water, #message, #heartbeat {
+    font-family: 'Roboto Mono', monospace;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--accent-color);
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+}
+
+/* Targets all the explanation paragraphs */
+#explainchild, #explainiphone, #explainlightning, #explaintree,
+#explaincoca, #explainwater, #explainmessage, #explainheart {
+    font-size: 0.9rem;
+    color: var(--secondary-text);
+    max-width: 500px;
+    margin: 0 auto; /* Center the text if it wraps */
+}
+
+/* Styling the Horizontal Rule */
+hr {
+    border: none;
+    height: 1px;
+    background-color: var(--border-color);
+    margin: 3rem auto; /* Creates space between sections */
+}
+
+/* Styling the final sneeze message */
+#sneeze {
+    font-size: 1.1rem;
+    color: var(--secondary-text);
+    font-style: italic;
+}
+
+
+/* --- Responsive Design for Smaller Screens --- */
+@media (max-width: 600px) {
+    #header {
+        font-size: 1.3rem;
+    }
+
+    #time {
+        font-size: 1.1rem;
+    }
+    
+    #children, #iphone, #lightning-strike, #tree, #cocacola, #water, #message, #heartbeat {
+        font-size: 1.6rem;
+    }
+}
